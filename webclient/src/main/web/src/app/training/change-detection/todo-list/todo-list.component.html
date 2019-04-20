@@ -1,0 +1,34 @@
+<div class="container">
+  <h3>Parent component</h3>
+  <button (click)="shortList()" color="primary" mat-button>Short list</button>
+  <button (click)="resetData()" color="primary" mat-button>Reset data</button>
+  <button (click)="addTodo()" color="primary" mat-button>Add todo</button>
+  <button (click)="0" color="primary" mat-button>Trigger change</button>
+  <button (click)="triggerChange()" color="primary" mat-button>Increment</button>
+  Counter : {{triggerCount}}
+  <table>
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>*</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let todo of todo$ | async">
+      <td (click)="onSelect(todo)">{{todo.id}}</td>
+      <td (click)="onSelect(todo)">{{todo.name | myUpperCase}}</td>
+      <td (click)="onSelect(todo)">{{todo.description}}</td>
+      <td (click)="onSelect(todo)">{{todo}}</td>
+    </tr>
+    </tbody>
+  </table>
+  <app-todo-details [todo]="selectedTodo"></app-todo-details>
+  <app-todo-details-on-push-strategy [todo]="selectedTodo"></app-todo-details-on-push-strategy>
+  <mat-divider></mat-divider>
+  <div>OnChange count : {{onChangeCount}}</div>
+  <div>DoCheck count : {{doCheckCount}}</div>
+  <div>AfterContentChecked count : {{afterContentChecked}}</div>
+</div>
+

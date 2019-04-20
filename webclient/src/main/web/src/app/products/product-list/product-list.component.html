@@ -1,0 +1,30 @@
+<div class="table_container">
+  <mat-card class="mat-elevation-z8">
+    <mat-card-content>
+      <mat-spinner *ngIf="dataSource.loading$ | async"></mat-spinner>
+      <table [dataSource]="dataSource" aria-label="Elements" class="full-width-table" mat-table matSort>
+        <!-- Id Column -->
+        <ng-container matColumnDef="id">
+          <th *matHeaderCellDef mat-header-cell mat-sort-header>Id</th>
+          <td *matCellDef="let row" mat-cell>{{row.id}}</td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th *matHeaderCellDef mat-header-cell mat-sort-header>Name</th>
+          <td *matCellDef="let row" mat-cell>{{row.name}}</td>
+        </ng-container>
+
+        <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+        <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+      </table>
+
+      <mat-paginator #paginator
+                     [length]="20"
+                     [pageIndex]="0"
+                     [pageSizeOptions]="[5, 10, 15, 25, 50, 100, 250]"
+                     [pageSize]="10">
+      </mat-paginator>
+    </mat-card-content>
+  </mat-card>
+</div>

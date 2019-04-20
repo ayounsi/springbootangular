@@ -1,0 +1,7 @@
+<div class="container">
+  <h3>Child component with OnPush change detection strategy</h3>
+  <span *ngIf="todo">Selected todo : {{todo?.name}}</span>
+  <mat-divider></mat-divider>
+  <div>OnChange count : {{changeDetectionCount}}</div>
+  <div>DoCheck count : {{doCheckCountOnPushStrategy}}</div>
+</div>

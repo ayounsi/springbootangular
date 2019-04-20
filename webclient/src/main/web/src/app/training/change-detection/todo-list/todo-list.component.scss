@@ -1,0 +1,17 @@
+.container {
+  margin: 20px;
+  padding: 20px;
+  border: brown solid thin;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+td {
+  padding: 4px 16px;
+}
