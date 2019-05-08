@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 // We can do this with a filter for all controllers
 @CrossOrigin
 @RestController
-// TODO make this base api url parametrized (A solution is proposed in the BookResource controller)
+// TODO make this base api url parametrized (A solution is used in the BookResource controller)
 @RequestMapping("api/v1")
 public class ProductResource {
 

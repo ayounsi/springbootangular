@@ -7,15 +7,23 @@ import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
 import java.util.Objects;
 
+/**
+ * Simple JavaBean domain object with an id property. Used as a base class for objects
+ * needing this property.
+ */
 @MappedSuperclass
-public class BaseEntity implements Serializable {
+public class BaseEntity<T extends Serializable> implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private T id;
 
-    public Long getId() {
+    public T getId() {
         return id;
+    }
+
+    public void setId(T id) {
+        this.id = id;
     }
 
     public boolean isNew() {

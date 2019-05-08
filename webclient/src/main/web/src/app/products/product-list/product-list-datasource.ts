@@ -2,7 +2,7 @@ import {DataSource} from '@angular/cdk/collections';
 import {MatPaginator, MatSort} from '@angular/material';
 import {finalize, map} from 'rxjs/operators';
 import {BehaviorSubject, merge, Observable} from 'rxjs';
-import {Product} from '../shared/product.model';
+import {Product} from '../shared/product';
 import {ProductsService} from '../shared/products.service';
 import {catchError} from 'rxjs/internal/operators/catchError';
 import {of} from 'rxjs/internal/observable/of';

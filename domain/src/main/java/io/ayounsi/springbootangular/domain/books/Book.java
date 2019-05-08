@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "books")
-public class Book extends BaseEntity {
+public class Book extends BaseEntity<Long> {
 
     private String title;
     private Isbn isbn;
@@ -24,8 +24,16 @@ public class Book extends BaseEntity {
         return title;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public Isbn getIsbn() {
         return isbn;
+    }
+
+    public void setIsbn(Isbn isbn) {
+        this.isbn = isbn;
     }
 
     @Override

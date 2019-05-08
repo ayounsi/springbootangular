@@ -13,7 +13,7 @@ import java.util.Objects;
  */
 @Entity
 @Table(name = "products")
-public class Product extends BaseEntity {
+public class Product extends BaseEntity<Long> {
 
     private String businessKey;
     private String name;

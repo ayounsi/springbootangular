@@ -1,0 +1,1 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=io.ayounsi.springbootangular.infra.security.SecurityJwtModuleAutoConfiguration

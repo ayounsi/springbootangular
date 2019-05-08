@@ -1,6 +1,6 @@
 package io.ayounsi.springbootangular.domain.books;
 
-import io.ayounsi.springbootangular.domain.commons.model.DomainRepository;
+import io.ayounsi.springbootangular.domain.commons.model.Repository;
 
-public interface BookRepository extends DomainRepository<Book> {
+public interface BookRepository extends Repository<Book, Long> {
 }

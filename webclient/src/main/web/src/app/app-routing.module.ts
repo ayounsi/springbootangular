@@ -8,6 +8,10 @@ const routes: Routes = [
     component: ProductListComponent
   },
   {
+    path: 'books',
+    loadChildren: './books/books.module#BooksModule'
+  },
+  {
     path: 'training',
     loadChildren: './training/training.module#TrainingModule'
   }

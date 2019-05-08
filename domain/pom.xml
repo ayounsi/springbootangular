@@ -16,6 +16,11 @@
             <groupId>javax.persistence</groupId>
             <artifactId>javax.persistence-api</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-core</artifactId>
+            <version>3.2.8.RELEASE</version>
+        </dependency>
     </dependencies>
 
 </project>
