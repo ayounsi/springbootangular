@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.math.BigDecimal;
 import java.util.Objects;
+import java.util.UUID;
 
 /**
  * A product is the item offered for sale. A product can be a service or an item.
@@ -20,8 +21,8 @@ public class Product extends BaseEntity<Long> {
     private String description;
     private BigDecimal price;
 
-    public Product(String businessKey, String name, String description, BigDecimal price) {
-        this.businessKey = businessKey;
+    public Product(String name, String description, BigDecimal price) {
+        this.businessKey = UUID.randomUUID().toString();
         this.name = name;
         this.description = description;
         this.price = price;

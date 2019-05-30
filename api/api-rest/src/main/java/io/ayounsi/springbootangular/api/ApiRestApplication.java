@@ -30,7 +30,7 @@ public class ApiRestApplication {
             });
             bookRepository.findAll().forEach(System.out::println);
             Stream.of("Product 1", "Product 2", "Product 3", "Product 4", "Product 5").forEach(name -> {
-                Product product = new Product(name + " key", name, name + " description", BigDecimal.TEN);
+                Product product = new Product(name, name + " description", BigDecimal.TEN);
                 productRepository.save(product);
             });
             productRepository.findAll().forEach(System.out::println);
