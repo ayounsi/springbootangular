@@ -22,10 +22,12 @@ export class TodoDetailsOnPushStrategyComponent implements OnInit, OnChanges, Do
   }
 
   ngOnChanges(changes: SimpleChanges): void {
+    console.log('TodoDetailsOnPushStrategyComponent onChange triggered');
     this.changeDetectionCount++;
   }
 
   ngDoCheck(): void {
+    console.log('TodoDetailsOnPushStrategyComponent onCheck triggered');
     this.doCheckCountOnPushStrategy++;
   }
 
