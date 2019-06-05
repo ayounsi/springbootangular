@@ -1,5 +1,5 @@
-import {ChangeDetectionStrategy, Component, DoCheck, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
-import {Todo} from '../../shared/todo.model';
+import { ChangeDetectionStrategy, Component, DoCheck, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Todo } from '../../shared/todo.model';
 
 @Component({
   selector: 'app-todo-details-on-push-strategy',
@@ -22,10 +22,12 @@ export class TodoDetailsOnPushStrategyComponent implements OnInit, OnChanges, Do
   }
 
   ngOnChanges(changes: SimpleChanges): void {
+    console.log('TodoDetailsOnPushStrategyComponent onChange triggered');
     this.changeDetectionCount++;
   }
 
   ngDoCheck(): void {
+    console.log('TodoDetailsOnPushStrategyComponent onCheck triggered');
     this.doCheckCountOnPushStrategy++;
   }
 

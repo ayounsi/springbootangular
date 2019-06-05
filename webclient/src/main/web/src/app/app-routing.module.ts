@@ -1,6 +1,6 @@
-import {NgModule} from '@angular/core';
-import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
-import {ProductListComponent} from './products/product-list/product-list.component';
+import { NgModule } from '@angular/core';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { ProductListComponent } from './products/product-list/product-list.component';
 
 const routes: Routes = [
   {
@@ -9,11 +9,11 @@ const routes: Routes = [
   },
   {
     path: 'books',
-    loadChildren: './books/books.module#BooksModule'
+    loadChildren: () => import(`./books/books.module`).then(m => m.BooksModule)
   },
   {
     path: 'training',
-    loadChildren: './training/training.module#TrainingModule'
+    loadChildren: () => import(`./training/training.module`).then(m => m.TrainingModule)
   }
 ];
 

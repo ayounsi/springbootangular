@@ -1,7 +1,7 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatPaginator, MatSort} from '@angular/material';
-import {ProductListDataSource} from './product-list-datasource';
-import {ProductsService} from '../shared/products.service';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator, MatSort } from '@angular/material';
+import { ProductListDataSource } from './product-list-datasource';
+import { ProductsService } from '../shared/products.service';
 
 @Component({
   selector: 'app-product-list',
@@ -9,8 +9,8 @@ import {ProductsService} from '../shared/products.service';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
+  @ViewChild(MatSort, {static: true}) sort: MatSort;
   dataSource: ProductListDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */

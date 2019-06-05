@@ -3,7 +3,6 @@
   <button (click)="shortList()" color="primary" mat-button>Short list</button>
   <button (click)="resetData()" color="primary" mat-button>Reset data</button>
   <button (click)="addTodo()" color="primary" mat-button>Add todo</button>
-  <button (click)="0" color="primary" mat-button>Trigger change</button>
   <button (click)="triggerChange()" color="primary" mat-button>Increment</button>
   Counter : {{triggerCount}}
   <table>
@@ -20,7 +19,7 @@
       <td (click)="onSelect(todo)">{{todo.id}}</td>
       <td (click)="onSelect(todo)">{{todo.name | myUpperCase}}</td>
       <td (click)="onSelect(todo)">{{todo.description}}</td>
-      <td (click)="onSelect(todo)">{{todo}}</td>
+      <td (click)="onSelect(todo)">{{todo | json}}</td>
     </tr>
     </tbody>
   </table>
