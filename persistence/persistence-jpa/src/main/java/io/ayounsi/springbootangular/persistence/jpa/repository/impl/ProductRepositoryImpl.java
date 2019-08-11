@@ -2,7 +2,7 @@ package io.ayounsi.springbootangular.persistence.jpa.repository.impl;
 
 import io.ayounsi.springbootangular.domain.products.Product;
 import io.ayounsi.springbootangular.domain.products.ProductRepository;
-import io.ayounsi.springbootangular.persistence.jpa.commons.AbstractCrudRepository;
+import io.ayounsi.springbootangular.persistence.jpa.core.AbstractCrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository

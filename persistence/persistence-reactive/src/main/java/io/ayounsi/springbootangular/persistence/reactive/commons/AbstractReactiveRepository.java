@@ -1,6 +1,6 @@
 package io.ayounsi.springbootangular.persistence.reactive.commons;
 
-import io.ayounsi.springbootangular.domain.commons.model.ReactiveRepository;
+import io.ayounsi.springbootangular.domain.core.repository.ReactiveRepository;
 import org.reactivestreams.Publisher;
 import org.springframework.data.repository.NoRepositoryBean;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;

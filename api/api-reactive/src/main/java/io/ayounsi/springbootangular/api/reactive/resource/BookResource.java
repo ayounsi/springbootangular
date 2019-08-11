@@ -2,7 +2,7 @@ package io.ayounsi.springbootangular.api.reactive.resource;
 
 import io.ayounsi.springbootangular.api.core.dto.BookDto;
 import io.ayounsi.springbootangular.domain.books.Book;
-import io.ayounsi.springbootangular.domain.commons.model.ReactiveRepository;
+import io.ayounsi.springbootangular.domain.core.repository.ReactiveRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;

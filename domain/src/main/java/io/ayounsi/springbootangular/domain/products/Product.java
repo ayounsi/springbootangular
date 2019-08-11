@@ -1,6 +1,6 @@
 package io.ayounsi.springbootangular.domain.products;
 
-import io.ayounsi.springbootangular.domain.commons.model.BaseEntity;
+import io.ayounsi.springbootangular.domain.core.model.BaseEntity;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;

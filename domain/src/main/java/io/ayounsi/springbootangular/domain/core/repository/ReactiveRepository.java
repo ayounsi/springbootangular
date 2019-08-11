@@ -1,4 +1,4 @@
-package io.ayounsi.springbootangular.domain.commons.model;
+package io.ayounsi.springbootangular.domain.core.repository;
 
 import org.reactivestreams.Publisher;
 import reactor.core.publisher.Flux;

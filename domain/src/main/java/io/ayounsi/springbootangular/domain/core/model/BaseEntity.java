@@ -1,4 +1,4 @@
-package io.ayounsi.springbootangular.domain.commons.model;
+package io.ayounsi.springbootangular.domain.core.model;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

@@ -1,7 +1,7 @@
 package io.ayounsi.springbootangular.api.reactive;
 
 import io.ayounsi.springbootangular.domain.books.Book;
-import io.ayounsi.springbootangular.domain.commons.model.ReactiveRepository;
+import io.ayounsi.springbootangular.domain.core.repository.ReactiveRepository;
 import io.ayounsi.springbootangular.persistence.reactive.EnableReactivePersistenceModule;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
