@@ -11,7 +11,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.4.RELEASE</version>
+        <version>2.4.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -44,15 +44,14 @@
     <!--               Properties                 -->
     <!-- ======================================== -->
     <properties>
-        <java.version>11</java.version>
+        <java.version>15</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <frontend-maven-plugin.version>1.7.5</frontend-maven-plugin.version>
-        <node.version>v10.15.3</node.version>
-        <npm.version>6.4.1</npm.version>
+        <frontend-maven-plugin.version>1.11.2</frontend-maven-plugin.version>
+        <node.version>v14.15.5</node.version>
 
-        <org.mapstruct.version>1.3.0.Final</org.mapstruct.version>
+        <org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
     </properties>
 
     <dependencyManagement>
@@ -84,29 +83,22 @@
     </dependencies>
 
     <build>
-
         <pluginManagement>
             <plugins>
                 <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                    <executions>
-                        <execution>
-                            <!-- Spring Boot Actuator displays build-related information
-                              if a META-INF/build-info.properties file is present -->
-                            <goals>
-                                <goal>build-info</goal>
-                            </goals>
-                            <configuration>
-                                <additionalProperties>
-                                    <encoding.source>${project.build.sourceEncoding}</encoding.source>
-                                    <encoding.reporting>${project.reporting.outputEncoding}</encoding.reporting>
-                                    <java.source>${maven.compiler.source}</java.source>
-                                    <java.target>${maven.compiler.target}</java.target>
-                                </additionalProperties>
-                            </configuration>
-                        </execution>
-                    </executions>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.1</version>
+                    <configuration>
+                        <release>${java.version}</release>
+                        <annotationProcessorPaths>
+                            <path>
+                                <groupId>org.mapstruct</groupId>
+                                <artifactId>mapstruct-processor</artifactId>
+                                <version>${org.mapstruct.version}</version>
+                            </path>
+                        </annotationProcessorPaths>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>com.github.eirslett</groupId>
@@ -116,7 +108,7 @@
                         <nodeVersion>${node.version}</nodeVersion>
 
                         <!-- optional: with node version greater than 4.0.0 will use npm provided by node distribution -->
-                        <npmVersion>${npm.version}</npmVersion>
+                        <!--                        <npmVersion>${npm.version}</npmVersion>-->
 
                         <!-- optional: where to download node and npm from. Defaults to https://nodejs.org/dist/ -->
                         <!-- <downloadRoot>http://myproxy.example.org/nodejs/</downloadRoot>-->
@@ -153,7 +145,6 @@
                 </plugin>
             </plugins>
         </pluginManagement>
-
     </build>
 
 </project>
