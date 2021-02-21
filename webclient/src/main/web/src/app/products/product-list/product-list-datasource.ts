@@ -1,5 +1,6 @@
 import {DataSource} from '@angular/cdk/collections';
-import {MatPaginator, MatSort} from '@angular/material';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
 import {finalize, map} from 'rxjs/operators';
 import {BehaviorSubject, merge, Observable} from 'rxjs';
 import {Product} from '../shared/product';
